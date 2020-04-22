@@ -22,10 +22,10 @@ samt förslag på hur vi tillsammans kan bättra oss.
 | push          | knuffa        | merge         | foga          |
 | fetch         | hämta         | checkout      | välj          |
 | switch        | byt           | restore       | återställ     |
-| rebase        | ympa          | squash        | mosa          |
 | amend         | rätta         | cherry-pick   | handplocka    |
 | diff          | skillnad      | blame         | klandra       |
-| repository    | arkiv         | fork          | klyka         |
+| repository    | arkiv         | squash        | mosa          |
+| fork          | klyka         | rebase        | ympa          |
 | branch (sub.) | gren          | branch (verb) | avgrena       | 
 | commit (sub.) | förbindelse   | commit (verb) | förbind       |
 | stash (sub.)  | gömma         | stash (verb)  | göm           |
@@ -58,12 +58,12 @@ kommandon ändrar din `~/.gitconfig` och kommer att verka globalt.
     git config --global alias.valj checkout
     git config --global alias.byt switch
     git config --global alias.aterstall restore
-    git config --global alias.ympa rebase
-    git config --global alias.mosa squash
     git config --global alias.ratta amend
     git config --global alias.handplocka cherry-pick
     git config --global alias.skillnad diff
     git config --global alias.klandra blame
+    git config --global alias.mosa squash
+    git config --global alias.ympa rebase
     git config --global alias.gren branch
     git config --global alias.forbind commit
     git config --global alias.gom stash
