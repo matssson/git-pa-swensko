@@ -1,11 +1,10 @@
-# Git på svenska
+# Git På Swensko
 
 ## Introduktion
 
-Det dagliga språket för de olika kommandona i `git` (eller `jävel`) är
-på svenska ett enda stort svengelskakalas. Jag finner mig själv ofta
-sägandes _"Kan du pusha branchen?"_ eller _"Jag pullar!"_, vilket
-känns pinsamt.
+Det dagliga språket för de olika kommandona i `git` är på svenska
+ett enda stort svengelskakalas. Jag finner mig själv ofta sägandes
+_"Kan du pusha branchen?"_ eller _"Jag pullar!"_, vilket känns pinsamt.
 
 Detta dokument ämnar etablera en ren svensk jargong som kan användas
 på arbetsplatsen för att med fördel undvika pressade situationer med
@@ -14,46 +13,34 @@ kollegor samt boskap.
 ## Förslag
 
 Nedan följer tabeller över verb och substantiv relaterade till git,
-deras nuvarande bruk samt förslag på hur vi tillsammans kan bättra
-oss.
+samt förslag på hur vi tillsammans kan bättra oss.
 
-| Verb        | Nuvarande bruk | Förslag       |
-|-------------|----------------|---------------|
-| pull        | pulla          | rycka         |
-| push        | pusha          | knuffa        |
-| fetch       | fetcha         | hämta         |
-| branch      | brancha        | förgrena      |
-| commit      | commita        | förbinda      |
-| rebase      | rebasa         | ympa          |
-| merge       | merga          | sammanfoga    |
-| squash      | squasha        | mosa          |
-| stash       | stasha         | gömma         |
-| tag         | tagga          | märka         |
-| cherry-pick | cherry-picka   | plocka russin |
-| amend       | amenda         | rätta till    |
-| blame       | blamea         | klandra       |
-
-| Substantiv   | Nuvarande bruk | Förslag     |
-|--------------|----------------|-------------|
-| git          | git            | jävel       |
-| repository   | repo           | förvaring   |
-| branch       | branch         | gren        |
-| commit       | commit         | förbindelse |
-| pull request | pull request   | ryckbegäran |
-| stash        | stash          | gömma       |
-| tag          | tagg           | märke       |
+| Engelska      | Svenska       | Engelska      | Svenska       |
+|---------------|---------------|---------------|---------------|
+| git           | git           | GitHub        | GitHub        |
+| pull          | drag          | pull request  | dragförslag   |
+| push          | knuffa        | merge         | foga          |
+| fetch         | hämta         | checkout      | välj          |
+| switch        | byt           | restore       | återställ     |
+| rebase        | ympa          | squash        | mosa          |
+| amend         | rätta         | cherry-pick   | handplocka    |
+| diff          | skillnad      | blame         | klandra       |
+| repository    | arkiv         | fork          | klyka         |
+| branch (sub.) | gren          | branch (verb) | avgrena       | 
+| commit (sub.) | förbindelse   | commit (verb) | förbind       |
+| stash (sub.)  | gömma         | stash (verb)  | göm           |
+| tag (sub.)    | märkning      | tag (verb)    | märk          |
+| master branch | mästergren    | HEAD          | HUVUD         |
 
 ## Exempel
 
-    - Kan du rycka grenen jag just ympade och knuffa till github?
+    - Kan du dra grenen jag just ympade och knuffa den till GitHub?
 
-    - Jag förgrenade alldeles nyss och förband ändringarna från min gömma där.
+    - Jag avgrenade alldeles nyss och förband ändringarna från min gömma där.
 
-    - Skicka en ryckbegäran när du är färdig med sammanfogningen!
+    - Skicka ett dragförslag när du är färdig med sammanfogningen!
 
-    - Låt oss plocka russin från mäster-grenen.
-    
-    - Hoppsan, jag råkade visst kraftknuffa mot mäster-grenen.. D:
+    - Vi byter till den här grenen och handplockar från mästergrenen.
 
     - Mosa dina förbindelser innan du sammanfogar.
 
@@ -61,19 +48,23 @@ oss.
 
 Nedan följer en rad kommandoradskommandon för att sätta upp en svensk
 gitmiljö. Avsaknaden av svenska tecken i täcknamnen beror på en brist i git
-(överväg att förbättra mjukvaran och skicka en ryckbegäran!). Följande
+(överväg att förbättra mjukvaran och skicka ett dragförslag!). Följande
 kommandon ändrar din `~/.gitconfig` och kommer att verka globalt.
 
-    git config --global alias.ryck pull
+    git config --global alias.drag pull
     git config --global alias.knuffa push
-    git config --global alias.gren branch
-    git config --global alias.forgrena branch
-    git config --global alias.forbinda commit
+    git config --global alias.foga merge
+    git config --global alias.hamta fetch
+    git config --global alias.valj checkout
+    git config --global alias.byt switch
+    git config --global alias.aterstall restore
     git config --global alias.ympa rebase
-    git config --global alias.sammanfoga merge
-    git config --global alias.gom stash
+    git config --global alias.mosa squash
+    git config --global alias.ratta amend
+    git config --global alias.handplocka cherry-pick
+    git config --global alias.skillnad diff
     git config --global alias.klandra blame
-    git config --global alias.marke tag
+    git config --global alias.gren branch
+    git config --global alias.forbind commit
+    git config --global alias.gom stash
     git config --global alias.mark tag
-
-    alias jävel=git
